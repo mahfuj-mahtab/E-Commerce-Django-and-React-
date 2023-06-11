@@ -8,6 +8,7 @@ class Products(models.Model):
     aditional_image_2 = models.ImageField(upload_to="media",default="none")
     aditional_image_3 = models.ImageField(upload_to="media",default="none")
     description = models.CharField(max_length=3000)
+    price = models.FloatField(default=0,null=True)
     short_description = models.CharField(max_length=1000)
     category = models.ForeignKey(Category,on_delete=models.CASCADE,null=True)
     def __str__(self) -> str:
