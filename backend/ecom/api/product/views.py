@@ -7,3 +7,10 @@ from .serializers import *
 class ProductsViewSet(viewsets.ModelViewSet):
     queryset = Products.objects.all().order_by('name')
     serializer_class = ProductsSerializers
+    
+def  SingleProductShow(request,id):
+    product =  Products.objects.get(id = id)
+    serializer = SingleProductsSerializers(product)
+    # print(serializer.data, ' product data')
+    return JsonResponse(serializer.data, safe= False)
+        

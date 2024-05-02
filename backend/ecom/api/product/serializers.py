@@ -5,3 +5,8 @@ class ProductsSerializers(serializers.HyperlinkedModelSerializer):
         model = Products
         depth = 1
         fields = '__all__'
+class SingleProductsSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Products
+        depth = 1
+        fields = '__all__'

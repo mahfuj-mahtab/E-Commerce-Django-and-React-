@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "api.product",
     'api.user',
     "corsheaders",
+    'api.order',
 
 ]
 
